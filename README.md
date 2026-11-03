@@ -1,23 +1,37 @@
 # MiKey
 
-Vietnamese and German typing for macOS, Windows, and Linux. Forked from [Vikey](https://github.com/trungdq88/Vikey) by Tony Dinh.
+Bộ gõ tiếng Việt Telex cho người Việt ở Thụy Sĩ, Đức và Áo.
 
-## Features
+**[mikey.mikephung.com](https://mikey.mikephung.com)**
 
-### Vietnamese Mode (Telex)
-- **Telex** with modern or classic tone placement (hoà / hòa), spell checking
-- **Auto switch:** Automatically detects and switches between Vietnamese and English
-- **Programming-aware:** `var`, `const`, `git push`, `obj.dir` stay unchanged
-- **Undo:** Press Delete right after an automatic fix to undo it
+## Vấn đề
 
-### German Mode (coming soon)
-- Type umlauts easily: `ae` → `ä`, `oe` → `ö`, `ue` → `ü`
-- Eszett support: `ss` → `ß` (optional)
+Telex thường không biết bạn đang viết tiếng gì:
+- `text` → `tẽt`
+- `über` → `ơber`
+- `wir` → `ửi`
 
-## Telex Guide
+MiKey tự nhận ra tiếng Anh và tiếng Đức, giữ nguyên các từ đó.
 
-| Keys | Result |
-|------|--------|
+## Tính năng
+
+- **Telex** với đặt dấu hiện đại hoặc cổ điển (hoà / hòa)
+- **Tự chuyển:** Nhận biết khi bạn gõ tiếng Anh hoặc tiếng Đức
+- **Phím ä ö ü ß:** Gõ thẳng, không bị Telex làm hỏng (über, Grüße, Café)
+- **~30.000 từ tiếng Đức:** wir, der, nur, dass, wissen giữ nguyên
+- **~40.000 từ tiếng Anh:** text, server, deploy, osx giữ nguyên
+- **Backspace hoàn tác:** Bấm ngay sau từ bị sửa để lấy lại đúng phím đã gõ
+
+## Cài đặt
+
+Tải bản mới nhất từ [Releases](https://github.com/mikephung/MiKey/releases).
+
+**macOS 13+:** Mở file .dmg, kéo MiKey vào thư mục hiện ra. Lần đầu cần đăng xuất/đăng nhập lại.
+
+## Phím Telex
+
+| Phím | Kết quả |
+|------|---------|
 | aa | â |
 | aw | ă |
 | ee | ê |
@@ -30,41 +44,21 @@ Vietnamese and German typing for macOS, Windows, and Linux. Forked from [Vikey](
 | r | hỏi (?) |
 | x | ngã (~) |
 | j | nặng (.) |
-| z | remove tone |
+| z | bỏ dấu |
 
-## Build
+## Build từ source
 
-### macOS
-Requires Xcode and [XcodeGen](https://github.com/yonaskolb/XcodeGen).
+Yêu cầu Xcode và [XcodeGen](https://github.com/yonaskolb/XcodeGen).
 
 ```sh
 xcodegen generate
 xcodebuild -project MiKey.xcodeproj -scheme MiKey -configuration Release build
 ```
 
-### Windows
-Requires Visual Studio with C++ support.
+## Ghi công
 
-```sh
-cd Windows
-cmake -B build
-cmake --build build --config Release
-```
+MiKey được fork từ [Vikey](https://github.com/trungdq88/Vikey) của [Tony Dinh](https://tonydinh.com), dựa trên [OpenKey](https://github.com/tuyenvm/OpenKey) của Tuyen Mai.
 
-### Linux
-Requires IBus development libraries.
+## Giấy phép
 
-```sh
-cd Linux
-cmake -B build
-cmake --build build
-sudo cmake --install build
-```
-
-## Credits
-
-MiKey is based on [Vikey](https://github.com/trungdq88/Vikey) by [Tony Dinh](https://tonydinh.com), which is based on [OpenKey](https://github.com/tuyenvm/OpenKey) by Tuyen Mai.
-
-## License
-
-GNU General Public License v3.0. See [LICENSE](LICENSE).
+GNU General Public License v3.0. Xem [LICENSE](LICENSE).
