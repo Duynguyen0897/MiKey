@@ -1,6 +1,6 @@
 name: MiKey
 options:
-  bundleIdPrefix: com.mikey
+  bundleIdPrefix: com.mikephung.inputmethod
   deploymentTarget:
     macOS: "13.0"
   createIntermediateGroups: true
@@ -33,7 +33,7 @@ targets:
     settings:
       base:
         PRODUCT_NAME: MiKey
-        PRODUCT_BUNDLE_IDENTIFIER: com.mikey.app
+        PRODUCT_BUNDLE_IDENTIFIER: com.mikephung.inputmethod.MiKey
         INFOPLIST_FILE: App/Info.plist
         CODE_SIGN_ENTITLEMENTS: App/MiKey.entitlements
         CODE_SIGN_STYLE: Automatic
